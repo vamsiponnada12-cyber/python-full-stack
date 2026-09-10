@@ -1,3 +1,4 @@
+'''
 # DAY 1 of learning python...
 
 ### what is program?
@@ -228,6 +229,7 @@ And he pick the from the most loved series called monty python
 
 The first version was released in the year 1991 which is python 0.9.0 and now the version we are using 3.14
 
+'''
 
 
 
@@ -243,206 +245,29 @@ The first version was released in the year 1991 which is python 0.9.0 and now th
 
 
 
+import math
 
+def solve():
+    balance = 5000
+    attempts = 0
+    access = False
+    while attempts < 3:
+        entered_pin = input().strip()
+        if entered_pin == "1234":
+            access = True
+            break
+        attempts += 1
+    
+    if access:
+        print("Access Granted")
+        withdraw = float(input())
+        fee = withdraw * 0.02
+        final_balance = balance - (withdraw + fee)
+        print(math.floor(final_balance))
+    else:
+        print("Card Blocked")
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+if __name__ == "__main__":
+    
 
 

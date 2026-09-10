@@ -3,7 +3,7 @@ Modules
 --------
 1.built-in modules
 -------------------
--->the modules are developed by prodrammer and those comes with installation
+-->the modules are developed by programmer and those comes with installation
 
 eg
 ---
@@ -64,7 +64,31 @@ import modules_practice as mp
 print(mp.add_(3,4))
 
 
+'''
+import math
 
+correct_pin = "1234"
+balance = 5000
+access_granted = False
+
+
+for i in range(3):
+    pin = input().strip()
+    
+    if pin == correct_pin:
+        access_granted = True
+        print("Access Granted")
+        
+        withdrawal = float(input().strip())
+        
+        total_deduction = withdrawal + (withdrawal * 0.02)
+        final_balance = math.floor(balance - total_deduction)
+        
+        print(final_balance)
+        break
+
+    else:
+        print("Card Blocked")
 
 
 
